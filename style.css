@@ -1,0 +1,101 @@
+/*
+Theme Name: EdTech Hub Database
+Text Domain: edtechhubdb
+Version: 1.0
+Description: Theme for the Ed Tech Hub MVP Database
+Author: Public Digital
+Author URI: https://public.digital
+*/
+
+body { font-family: 'Open Sans', sans-serif; }
+h1, h2, h3, h4 { font-weight: bold; }
+.badge-prototype { background: #fff; color: #e17714; margin-right: 10px; }
+
+.prototype-bar { background: #e17714; color: #fff; padding: 10px 0;}
+.prototype-bar p {margin: 0; padding: 0;}
+.prototype-bar p a { color: #fff; border-bottom: #fff 1px dotted; }
+.prototype-bar p a:hover { color: #000; border-bottom: #000 1px solid; }
+
+header { padding: 20px 0 10px 0;  margin-bottom: 20px; }
+
+header div.brand {
+  min-height: 80px;
+  padding: 13px 0 0 0;
+  margin-bottom: 10px;
+}
+header div.brand .brand-name, footer div.brand .brand-name {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0px;
+}
+header div.brand a, footer div.brand a { color: #000; }
+header div.brand a:hover, footer div.brand a:hover { color: #e17714; border-bottom: #e17714 1px solid; }
+
+header .site-name { font-size: 2rem; font-weight: bold; margin: 0; padding: 10px 0; color: #e17714;}
+header .site-name a { color: #e17714; }
+header .site-name a:hover { border-bottom: #e17714 1px solid; }
+
+header nav .menu-item { display: block; padding: .5rem;}
+header nav .menu-item a { padding: .5rem;}
+
+footer { padding: 20px 0; margin-top: 20px; background: #efefef; border-top: #e17714 5px solid; }
+footer .container { border-top: #efefef 1px solid; padding-top: 1em;}
+footer .container h2 { font-size: 1.3em; }
+footer .container p { font-size: 0.9em;}
+
+footer div.brand .brand-name { font-size: 1.5rem;}
+footer div.brand .operated-by { margin: 0; padding: 0;}
+footer div.supported-by ul { list-style: none; margin: 0; padding: 0; }
+footer div.supported-by ul li { display: inline-block; margin-right: 10px;}
+
+main { min-height: 250px;}
+main h1 { font-size: 2em; margin: 0 0 1.2em 0;}
+main h2 { font-size: 1.8em; margin: 0 0 1.2em 0;}
+main h1:before, main h2:before {
+  display: block;
+  height: 4px;
+  background: #e17714;
+  width: 70px;
+  content: "   ";
+  margin-bottom: 15px;
+}
+main h2:before { background: #f9dcc0; }
+
+main section { padding: 0 0 20px 0; margin-bottom: 40px; }
+main header { border: 0; }
+
+main section.response-filters .card { margin: 20px 0; }
+main section.response-filters .card ul { margin: 0; padding: 0; list-style: none; }
+main section.response-filters .card ul li.active a { background: #f9dcc0;}
+main section.response-filters .card ul li a { display: block; color: #000; border-radius: 5px; padding: 3px;}
+main section.response-filters .card ul li a:hover { background: #e17714;}
+
+main section.response-list article { padding: 1em 0; border-bottom: #efefef 1px solid; }
+main section.response-list article header { padding: 0;}
+main section.response-list article h3 { font-size:  1.6em; margin: 0;}
+
+main section.response-item article { padding: 1em 0; border-bottom: #efefef 1px solid; }
+main section.response-item article header { padding: 0;}
+main section.response-item article header h1 span { color: #e17714; }
+main section.response-item article .response-content { padding-bottom: 1em; padding-right: 300px}
+main section.response-item article .response-meta { padding-top: 1em; }
+main section.response-item article .response-meta li.code-type { margin-top: 1.5em; }
+
+main section.pagination { padding: }
+
+main .breadcrumbs { text-align: right; margin-top: -20px;}
+main .breadcrumbs ul { list-style: none; margin: 0; padding: 0; }
+main .breadcrumbs ul li { display: inline-block; }
+main .breadcrumbs ul li a { color: #a7a7a7;}
+main .breadcrumbs ul li a:after { content: " //"}
+
+
+@media (max-width: 993px) {
+  header .site-name { font-size: 1.5rem;}
+  header nav { margin-top: 10px;}
+
+  main h2 { font-size: 1.5rem;}
+  main .response-meta-content  { padding-bottom: 20px;}
+  main section.response-item article .response-content { padding-right: 0; }
+}
