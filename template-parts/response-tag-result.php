@@ -14,6 +14,17 @@
 
       <?php if(is_tax()) : ?>
           <?php echo "<h2>".ethdb_get_filter_title($wp_query,$page)."</h2>"; ?>
+          <?php
+            $filters = ethdb_display_filters($wp_query);
+            if($filters != "")  :
+          ?>
+            <div class="response-list-current-filters">
+              <p>With these filters:</p>
+              <?php echo $filters; ?>
+            </div>
+          <?
+            endif;
+          ?>
       <?php else : ?>
         <h2>All tools<?php echo $page ?>:</h2>
       <?php endif; ?>
