@@ -17,17 +17,16 @@
       <li><a href="/">Homepage</a></li>
       <li><a href="/tools/">Education tools</a></li>
       <li>
-        <?php if(is_paged()) :?><a href="/<?php echo $term->taxonomy.'/'.$term->slug; ?>"><?php endif;?>
         <?php
-          echo $taxonomy->labels->singular_name;
-          echo ': ';
-          echo $term->name;
+          $page = "";
+          if(is_paged()) { $page = " - page ".get_query_var('paged'); }
+          echo ethdb_get_filter_title($wp_query,$page);
         ?>
-        <?php if(is_paged()) : ?></a><?php endif; ?>
+        <?php if(is_paged()) :?>
+          (Page <?php echo get_query_var('paged'); ?>)
+        <?php endif; ?>
       </li>
-      <?php if(is_paged()) :?>
-        <li>Page <?php echo get_query_var('paged'); ?></li>
-      <?php endif; ?>
+
     </ul>
   </div>
 <?php elseif(is_archive()) : ?>
