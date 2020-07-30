@@ -37,6 +37,10 @@
             get_template_part( 'template-parts/response-excerpt', get_post_type() );
 
           }
+        } else {
+
+          get_template_part('template-parts/no-results', get_post_type());
+
         }
         ?>
       </section>
