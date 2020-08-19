@@ -1,7 +1,7 @@
 /*
 Theme Name: EdTech Hub Database
 Text Domain: edtechhubdb
-Version: 1.0
+Version: 2.0
 Description: Theme for the Ed Tech Hub MVP Database
 Author: Public Digital
 Author URI: https://public.digital
@@ -70,6 +70,21 @@ main section.response-filters .card ul { margin: 0; padding: 0; list-style: none
 main section.response-filters .card ul li.active a { background: #f9dcc0;}
 main section.response-filters .card ul li a { display: block; color: #000; border-radius: 5px; padding: 3px;}
 main section.response-filters .card ul li a:hover { background: #e17714;}
+
+main section.response-filters form>div>ul { margin: 0; padding: 0; list-style: none; }
+main section.response-filters form>div>ul li { border: 1px solid rgba(0,0,0,.125); padding: 0; margin: 0 0 1em 0; display: block;}
+main section.response-filters form>div>ul li h4 { padding: .75rem 1.25rem; margin: 0; background-color: rgba(0,0,0,.03); border-bottom: 1px solid rgba(0,0,0,.125);  }
+main section.response-filters form>div>ul li ul { margin: 0; padding: .75rem 1.25rem; list-style; none; }
+main section.response-filters form>div>ul li>ul li { border: 0; padding: 3px; margin: 0; display: block; }
+main section.response-filters form>div>ul li>ul li.current-cat { background: #f9dcc0; }
+
+main section.response-list .response-list-current-filters { font-size: 0.9em; border: 1px solid rgba(0,0,0,.125); padding: 5px; margin-bottom: 1em; }
+main section.response-list .response-list-current-filters p { margin: 0; font-weight: bold;}
+main section.response-list .response-list-current-filters ul { margin: 0; padding: 0; list-style: none; }
+main section.response-list .response-list-current-filters ul li { padding: 3px 0;}
+main section.response-list .response-list-current-filters ul li span { background: #f9dcc0; padding: 3px 5px; }
+main section.response-list .response-list-current-filters ul li span a { background: #e17714; padding: 0 5px; border-radius: 3px; font-weight: bold; color: #fff;}
+main section.response-list .response-list-current-filters ul li span a:hover { background: #fff; color: #e17714;}
 
 main section.response-list article { padding: 1em 0; border-bottom: #efefef 1px solid; }
 main section.response-list article header { padding: 0;}
