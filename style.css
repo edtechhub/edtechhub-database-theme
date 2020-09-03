@@ -9,9 +9,9 @@ Author URI: https://public.digital
 
 body { font-family: 'Open Sans', sans-serif; }
 h1, h2, h3, h4 { font-weight: bold; }
-.badge-prototype { background: #fff; color: #e17714; margin-right: 10px; }
+.badge-prototype { background: #fff; color: #ff5c00; margin-right: 10px; }
 
-.prototype-bar { background: #e17714; color: #fff; padding: 10px 0;}
+.prototype-bar { background: #ff5c00; color: #fff; padding: 10px 0;}
 .prototype-bar p {margin: 0; padding: 0;}
 .prototype-bar p a { color: #fff; border-bottom: #fff 1px dotted; }
 .prototype-bar p a:hover { color: #000; border-bottom: #000 1px solid; }
@@ -30,16 +30,17 @@ header div.brand .brand-name, footer div.brand .brand-name {
   margin-bottom: 0px;
 }
 header div.brand a, footer div.brand a { color: #000; }
-header div.brand a:hover, footer div.brand a:hover { color: #e17714; border-bottom: #e17714 1px solid; }
+header div.brand a:hover, footer div.brand a:hover { color: #ff5c00; border-bottom: #ff5c00 1px solid; }
 
-header .site-name { font-size: 2rem; font-weight: bold; margin: 0; padding: 10px 0; color: #e17714;}
-header .site-name a { color: #e17714; }
-header .site-name a:hover { border-bottom: #e17714 1px solid; }
+header .site-name { font-size: 1.9rem; font-weight: bold; margin: 0; padding: 10px 0; color: #ff5c00;}
+header .site-name a { color: #ff5c00; }
+header .site-name a:hover { border-bottom: #ff5c00 1px solid; }
 
 header nav .menu-item { display: block; padding: .5rem;}
-header nav .menu-item a { padding: .5rem;}
+header nav .menu-item a { padding: .5rem;font-weight: 500; font-size: 1.1em;}
+header nav .menu-item a:hover, header nav .menu-item a:active, header nav .menu-item a:focus { border-bottom: 2px solid #ff5c00; }
 
-footer { padding: 20px 0; margin-top: 20px; background: #efefef; border-top: #e17714 5px solid; }
+footer { padding: 20px 0; margin-top: 20px; background: #efefef; border-top: #ff5c00 5px solid; }
 footer .container { border-top: #efefef 1px solid; padding-top: 1em;}
 footer .container h2 { font-size: 1.3em; }
 footer .container p { font-size: 0.9em;}
@@ -55,36 +56,36 @@ main h2 { font-size: 1.8em; margin: 0 0 1.2em 0;}
 main h1:before, main h2:before {
   display: block;
   height: 4px;
-  background: #e17714;
+  background: #ff5c00;
   width: 70px;
   content: "   ";
   margin-bottom: 15px;
 }
-main h2:before { background: #f9dcc0; }
+main h2:before { background: #ededec; }
 
 main section { padding: 0 0 20px 0; margin-bottom: 40px; }
 main header { border: 0; }
 
 main section.response-filters .card { margin: 20px 0; }
 main section.response-filters .card ul { margin: 0; padding: 0; list-style: none; }
-main section.response-filters .card ul li.active a { background: #f9dcc0;}
+main section.response-filters .card ul li.active a { background: #ededec;}
 main section.response-filters .card ul li a { display: block; color: #000; border-radius: 5px; padding: 3px;}
-main section.response-filters .card ul li a:hover { background: #e17714;}
+main section.response-filters .card ul li a:hover { background: #ff5c00;}
 
 main section.response-filters form>div>ul { margin: 0; padding: 0; list-style: none; }
 main section.response-filters form>div>ul li { border: 1px solid rgba(0,0,0,.125); padding: 0; margin: 0 0 1em 0; display: block;}
 main section.response-filters form>div>ul li h4 { padding: .75rem 1.25rem; margin: 0; background-color: rgba(0,0,0,.03); border-bottom: 1px solid rgba(0,0,0,.125);  }
 main section.response-filters form>div>ul li ul { margin: 0; padding: .75rem 1.25rem; list-style; none; }
 main section.response-filters form>div>ul li>ul li { border: 0; padding: 3px; margin: 0; display: block; }
-main section.response-filters form>div>ul li>ul li.current-cat { background: #f9dcc0; }
+main section.response-filters form>div>ul li>ul li.current-cat { background: #ededec; }
 
 main section.response-list .response-list-current-filters { font-size: 0.9em; border: 1px solid rgba(0,0,0,.125); padding: 5px; margin-bottom: 1em; }
 main section.response-list .response-list-current-filters p { margin: 0; font-weight: bold;}
 main section.response-list .response-list-current-filters ul { margin: 0; padding: 0; list-style: none; }
 main section.response-list .response-list-current-filters ul li { padding: 3px 0;}
-main section.response-list .response-list-current-filters ul li span { background: #f9dcc0; padding: 3px 5px; }
-main section.response-list .response-list-current-filters ul li span a { background: #e17714; padding: 0 5px; border-radius: 3px; font-weight: bold; color: #fff;}
-main section.response-list .response-list-current-filters ul li span a:hover { background: #fff; color: #e17714;}
+main section.response-list .response-list-current-filters ul li span { background: #ededec; padding: 3px 5px; }
+main section.response-list .response-list-current-filters ul li span a { background: #ff5c00; padding: 0 5px; border-radius: 3px; font-weight: bold; color: #fff;}
+main section.response-list .response-list-current-filters ul li span a:hover { background: #fff; color: #ff5c00;}
 
 main section.response-list article { padding: 1em 0; border-bottom: #efefef 1px solid; }
 main section.response-list article header { padding: 0;}
@@ -92,7 +93,7 @@ main section.response-list article h3 { font-size:  1.6em; margin: 0;}
 
 main section.response-item article { padding: 1em 0; border-bottom: #efefef 1px solid; }
 main section.response-item article header { padding: 0;}
-main section.response-item article header h1 span { color: #e17714; }
+main section.response-item article header h1 span { color: #ff5c00; }
 main section.response-item article .response-content { padding-bottom: 1em; padding-right: 300px}
 main section.response-item article .response-meta { padding-top: 1em; }
 main section.response-item article .response-meta li.code-type { margin-top: 1.5em; }
@@ -113,4 +114,12 @@ main .breadcrumbs ul li a:after { content: " //"}
   main h2 { font-size: 1.5rem;}
   main .response-meta-content  { padding-bottom: 20px;}
   main section.response-item article .response-content { padding-right: 0; }
+}
+
+a {
+    color: #ff5c00;
+}
+a:hover, a:active, a:focus {
+    color: #1f1e2c;
+    text-decoration: none;
 }
