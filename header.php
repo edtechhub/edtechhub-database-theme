@@ -38,7 +38,10 @@
         <div class="row">
           <div class="col-sm-12 col-lg-6">
             <div class="brand">
-              <p class="brand-name"><a href="https://edtechhub.org">The EdTech Hub</a></p>
+				<?php
+				$logo_url = "https://database.edtechhub.org/wp-content/uploads/2020/09/EdTech-Hub-Logo-W-Tagline.png";
+				echo '<img src="'. esc_url( $logo_url) .'" width="200" title="'. get_bloginfo( 'name' ) .'" alt="'. get_bloginfo( 'name').'" />';
+				?>
             </div>
           </div>
           <div class="col">
