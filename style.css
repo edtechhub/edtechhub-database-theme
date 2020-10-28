@@ -9,12 +9,6 @@ Author URI: https://public.digital
 
 body { font-family: 'Open Sans', sans-serif; }
 h1, h2, h3, h4 { font-weight: bold; }
-.badge-prototype { background: #fff; color: #ff5c00; margin-right: 10px; }
-
-.prototype-bar { background: #ff5c00; color: #fff; padding: 10px 0;}
-.prototype-bar p {margin: 0; padding: 0;}
-.prototype-bar p a { color: #fff; border-bottom: #fff 1px dotted; }
-.prototype-bar p a:hover { color: #000; border-bottom: #000 1px solid; }
 
 header { padding: 20px 0 10px 0;  margin-bottom: 20px; }
 
@@ -29,8 +23,7 @@ header div.brand .brand-name, footer div.brand .brand-name {
   font-size: 2rem;
   margin-bottom: 0px;
 }
-header div.brand a, footer div.brand a { color: #000; }
-header div.brand a:hover, footer div.brand a:hover { color: #ff5c00; border-bottom: #ff5c00 1px solid; }
+header div.brand a:hover, footer div.brand a:hover { cursor: pointer; }
 
 header .site-name { font-size: 1.9rem; font-weight: bold; margin: 0; padding: 10px 0; color: #ff5c00;}
 header .site-name a { color: #ff5c00; }

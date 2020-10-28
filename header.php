@@ -35,12 +35,9 @@
             <div class="brand">
 				<?php
 				$logo_url = "https://database.edtechhub.org/wp-content/uploads/2020/09/EdTech-Hub-Logo-W-Tagline.png";
-				echo '<img src="'. esc_url( $logo_url) .'" width="200" title="'. get_bloginfo( 'name' ) .'" alt="'. get_bloginfo( 'name').'" />';
+				echo '<a href="/"><img src="'. esc_url( $logo_url) .'" width="200" title="'. get_bloginfo( 'name' ) .'" alt="'. get_bloginfo( 'name').'" /></a>';
 				?>
             </div>
-          </div>
-          <div class="col">
-            <p class="site-name"><a href="<?php bloginfo('home'); ?>"><?php bloginfo('name'); ?></a></p>
           </div>
         </div>
 
