@@ -27,11 +27,6 @@
 		<?php
 		wp_body_open();
 		?>
-    <div class="prototype-bar">
-      <div class="container">
-        <p><span class="badge badge-prototype">PROTOTYPE</span> <strong>This is a prototype.</strong> We're continually improving the information on this site. Please <a href="/feedback" title="send us feedback">give us feedback</a>.</p>
-      </div>
-    </div>
 
     <header>
       <div class="container">
