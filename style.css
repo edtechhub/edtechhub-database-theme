@@ -1,7 +1,7 @@
 /*
 Theme Name: EdTech Hub Database
 Text Domain: edtechhubdb
-Version: 2.1
+Version: 2.2
 Description: Theme for the Ed Tech Hub MVP Database
 Author: Public Digital
 Author URI: https://public.digital
@@ -9,12 +9,6 @@ Author URI: https://public.digital
 
 body { font-family: 'Open Sans', sans-serif; }
 h1, h2, h3, h4 { font-weight: bold; }
-.badge-prototype { background: #fff; color: #ff5c00; margin-right: 10px; }
-
-.prototype-bar { background: #ff5c00; color: #fff; padding: 10px 0;}
-.prototype-bar p {margin: 0; padding: 0;}
-.prototype-bar p a { color: #fff; border-bottom: #fff 1px dotted; }
-.prototype-bar p a:hover { color: #000; border-bottom: #000 1px solid; }
 
 header { padding: 20px 0 10px 0;  margin-bottom: 20px; }
 
@@ -29,16 +23,14 @@ header div.brand .brand-name, footer div.brand .brand-name {
   font-size: 2rem;
   margin-bottom: 0px;
 }
-header div.brand a, footer div.brand a { color: #000; }
-header div.brand a:hover, footer div.brand a:hover { color: #ff5c00; border-bottom: #ff5c00 1px solid; }
+header div.brand a:hover, footer div.brand a:hover { cursor: pointer; }
 
 header .site-name { font-size: 1.9rem; font-weight: bold; margin: 0; padding: 10px 0; color: #ff5c00;}
 header .site-name a { color: #ff5c00; }
 header .site-name a:hover { border-bottom: #ff5c00 1px solid; }
 
 header nav .menu-item { display: block; padding: .5rem;}
-header nav .menu-item a { padding: .5rem;font-weight: 500; font-size: 1.1em;}
-header nav .menu-item a:hover, header nav .menu-item a:active, header nav .menu-item a:focus { border-bottom: 2px solid #ff5c00; }
+header nav .menu-item a { padding: .5rem;font-weight: 500; font-size: 1em;}
 
 footer { padding: 20px 0; margin-top: 20px; background: #efefef; border-top: #ff5c00 5px solid; }
 footer .container { border-top: #efefef 1px solid; padding-top: 1em;}
@@ -122,4 +114,77 @@ a {
 a:hover, a:active, a:focus {
     color: #1f1e2c;
     text-decoration: none;
+}
+
+
+/*  */
+li.menu-item-has-children > a:after {
+	content: ' \e828 ';
+	font-family: "fontello";
+}
+
+ul.navbar-nav li ul.sub-menu {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	margin-top: 0.5rem;
+	text-align: justify;
+	display: none;
+	background: #000;
+	padding: 15px;
+	z-index: 1;
+}
+
+ul.navbar-nav li a {
+	color: #777;
+}
+
+ul.navbar-nav li a:hover {
+	color: #ff5c00;
+}
+
+ul.navbar-nav li ul.sub-menu a {
+	text-decoration: none;
+	color: #fff;
+}
+
+ul.navbar-nav li ul.sub-menu a:hover {
+	color: #ff5c00;
+}
+
+ul.navbar-nav li ul.sub-menu a :hover {
+	color: #ff5c00;
+}
+
+ul.navbar-nav li ul.sub-menu li.active a {
+	color: #ff5c00;
+}
+
+ul.navbar-nav li:hover > ul,
+ul.navbar-nav li ul:hover {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+ul.navbar-nav li ul li {
+	list-style: none;
+	clear: both;
+	width: 100%;
+	padding: 5px;
+}
+
+.searchform input[type=text] {
+  background-color: white;
+  background-image: url('assets/images/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 8px 35px;
+  border: 1px solid #777;
+  outline: none;
+  border-radius: 5px;
+}
+
+.searchform input[type=text]:focus {
+  border: 1px solid #ff5c00;
 }
