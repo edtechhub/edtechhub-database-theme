@@ -18,7 +18,10 @@ function ethdb_register_styles() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-  wp_enqueue_style( 'ethdb-font', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap', array(), null);
+  wp_enqueue_style( 'preconnect', 'https://fonts.gstatic.com', array(), null);
+  wp_enqueue_style( 'ethdb-font', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap', array(), null);
+  wp_enqueue_style( 'tp-fontello-css', 'https://edtechhub.org/wp-content/plugins/essential-grid/public/assets/font/fontello/css/fontello.css?ver=3.0.7', array(), null);
+  wp_enqueue_style( 'ekoterra-icons-css', 'https://edtechhub.org/wp-content/themes/edtechhub/css/font-icons/css/fontello-embedded.css', array(), null);
   wp_enqueue_style( 'ethdb-bootstrap', get_template_directory_uri().'/bootstrap.min.css', array(), null );
 	wp_enqueue_style( 'ethdb-style', get_stylesheet_uri(), array(), $theme_version );
 
@@ -29,6 +32,7 @@ function ethdb_register_scripts() {
   $theme_version = wp_get_theme()->get( 'Version' );
 
   wp_enqueue_script(  'ethdb-bootstrap-js', get_template_directory_uri().'/bootstrap.min.js', array(), null);
+  wp_enqueue_script(  'ethdb-script-js', get_template_directory_uri().'/script.js', array(), null);
 
 }
 

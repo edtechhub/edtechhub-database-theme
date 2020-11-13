@@ -1,46 +1,85 @@
 /*
 Theme Name: EdTech Hub Database
 Text Domain: edtechhubdb
-Version: 2.2
+Version: 2.3
 Description: Theme for the Ed Tech Hub MVP Database
 Author: Public Digital
 Author URI: https://public.digital
 */
 
-body { font-family: 'Open Sans', sans-serif; }
+body { font-family: 'Montserrat', sans-serif; }
 h1, h2, h3, h4 { font-weight: bold; }
 
-header { padding: 20px 0 10px 0;  margin-bottom: 20px; }
+header { padding: 20px 0 10px 0;  margin-bottom: 20px; border-bottom: 1px solid #f6f5f1 }
 
 header div.brand {
   min-height: 80px;
-  padding: 13px 0 0 0;
-  margin-bottom: 10px;
 }
 header div.brand .brand-name, footer div.brand .brand-name {
-  text-transform: uppercase;
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 0px;
 }
-header div.brand a:hover, footer div.brand a:hover { cursor: pointer; }
 
 header .site-name { font-size: 1.9rem; font-weight: bold; margin: 0; padding: 10px 0; color: #ff5c00;}
 header .site-name a { color: #ff5c00; }
 header .site-name a:hover { border-bottom: #ff5c00 1px solid; }
 
 header nav .menu-item { display: block; padding: .5rem;}
-header nav .menu-item a { padding: .5rem;font-weight: 500; font-size: 1em;}
+header nav .menu-item a { padding: .5rem;font-weight: 300; font-size: 1em; cursor: pointer}
+header nav div#navbarNav { justify-content: flex-end; }
+header nav ul { margin-right: 20px; }
 
-footer { padding: 20px 0; margin-top: 20px; background: #efefef; border-top: #ff5c00 5px solid; }
-footer .container { border-top: #efefef 1px solid; padding-top: 1em;}
+header .search_submit {
+  font-size: 16px;
+  font-weight: 700 !important;
+  background : #fff;
+  border: none;
+  cursor: pointer;
+  outline: none
+}
+
+header .search_submit:before {
+  font-size: 1.7em;
+  margin-top: -2px;
+  color: #ff5c00;
+  font-weight: 400 !important;
+  line-height: inherit !important;
+  font-weight: inherit;
+  font-style: inherit;
+  display: inline-block;
+}
+header .search_submit:before:hover {
+  color: #000;
+}
+
+footer { padding: 20px 0; margin-top: 20px; }
+footer .container { padding: 1em; background: #F8F8F882; }
 footer .container h2 { font-size: 1.3em; }
 footer .container p { font-size: 0.9em;}
 
-footer div.brand .brand-name { font-size: 1.5rem;}
-footer div.brand .operated-by { margin: 0; padding: 0;}
-footer div.supported-by ul { list-style: none; margin: 0; padding: 0; }
+footer div.brand .brand-name { font-size: 28px; color: #111111; margin-top: 35px; }
+footer div.supported-by ul { list-style: none; margin: 0; padding: 0; text-align: right }
 footer div.supported-by ul li { display: inline-block; margin-right: 10px;}
+footer div.supported-by ul li img.ukaid { width: 120px; height: auto;}
+footer div.supported-by ul li img.wb { width: 257px; height: auto;}
+
+footer div.brand-row { margin: 50px 10px;}
+
+footer .disclaimer {
+  font-size: 10px;
+  text-align: left;
+  color: #777777;
+  margin-top: 25px;
+}
+
+footer .copyright {
+  margin-top: 55px;
+  text-align: center;
+  color: #777777;
+  font-size: 1.1em;
+  font-weight: 300;
+}
 
 main { min-height: 250px;}
 main h1 { font-size: 2em; margin: 0 0 1.2em 0;}
@@ -48,7 +87,6 @@ main h2 { font-size: 1.8em; margin: 0 0 1.2em 0;}
 main h1:before, main h2:before {
   display: block;
   height: 4px;
-  background: #ff5c00;
   width: 70px;
   content: "   ";
   margin-bottom: 15px;
@@ -89,8 +127,6 @@ main section.response-item article header h1 span { color: #ff5c00; }
 main section.response-item article .response-content { padding-bottom: 1em; padding-right: 300px}
 main section.response-item article .response-meta { padding-top: 1em; }
 main section.response-item article .response-meta li.code-type { margin-top: 1.5em; }
-
-main section.pagination { padding: }
 
 main .breadcrumbs { text-align: right; margin-top: -20px;}
 main .breadcrumbs ul { list-style: none; margin: 0; padding: 0; }
@@ -174,17 +210,52 @@ ul.navbar-nav li ul li {
 	padding: 5px;
 }
 
-.searchform input[type=text] {
-  background-color: white;
-  background-image: url('assets/images/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding: 8px 35px;
-  border: 1px solid #777;
-  outline: none;
-  border-radius: 5px;
+
+/* The overlay effect with black background */
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #fff;
 }
 
-.searchform input[type=text]:focus {
-  border: 1px solid #ff5c00;
+/* The content */
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+/* Close button */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #777;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+/* Style the search field */
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 2rem;
+  border: none;
+  float: left;
+  width: 50%;
+  margin-left: 25%;
+  background: white;
+  border-bottom: 1px solid #000;
+  outline: none;
 }

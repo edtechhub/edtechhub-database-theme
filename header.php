@@ -19,8 +19,6 @@
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 
     <?php wp_head(); ?>
-    <link property="stylesheet" rel='stylesheet' id='tp-fontello-css'  href='https://edtechhub.org/wp-content/plugins/essential-grid/public/assets/font/fontello/css/fontello.css?ver=3.0.7' type='text/css' media='all' />
-    <link property="stylesheet" rel='stylesheet' id='ekoterra-icons-css'  href='https://edtechhub.org/wp-content/themes/edtechhub/css/font-icons/css/fontello-embedded.css' type='text/css' media='all' />
 
 	</head>
 
@@ -53,11 +51,9 @@
                   'depth' => 2
                 )); ?>
               </div>
-            <form role="search" method="get" id="searchform" class="searchform" action="/">
-              <div>
-                <input type="text" name="s" id="s" placeholder="Search …">
-              </div>
-            </form>
+              <button type="submit" class="search_submit icon-search-alt" onclick="openSearch()">
+                <span class="search-submit-text">Search</span>
+              </button>
             </nav>
           </div>
         </div>
