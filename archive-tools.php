@@ -8,7 +8,6 @@
  */
 
 get_header();
-get_template_part( 'template-parts/tool-breadcrumbs', get_post_type() );
 ?>
 
 <section class="introduction">
