@@ -18,7 +18,6 @@ get_header();
     while ( have_posts() ) {
       the_post();
 
-      get_template_part( 'template-parts/tool-breadcrumbs', get_post_type() );
       get_template_part( 'template-parts/response-content', get_post_type() );
     }
   }
